@@ -1,0 +1,31 @@
+/*body
+{
+	background-image:url("9000.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	font-family: new time roman;
+}*/
+
+table{
+background-color: lightblue;
+width:50%;
+height:70%;
+text-align: center;
+border-style: solid;
+border-width: 1px;
+border-color: white;
+}
+.main-heading{
+background-color:lightgreen;
+text-align: left;
+width: 100%;
+border-style:solid;
+border-color: white;
+border-width: 1px;
+padding: 10px;
+text-align: center; 
+}
+
+td{
+padding:20px;
+}

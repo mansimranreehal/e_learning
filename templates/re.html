@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>login form</title>
+	<link rel="stylesheet" type="text/css" href="/assets/css/re.css">
+</head>
+
+<body>
+
+<form method="POST" action="" enctype="multipart/form-data">
+						{% csrf_token %}
+
+<!--<caption class="a" bgcolor:lightgreen>REGISTRATION FORM</caption>-->
+
+
+<table cellspacing="2" align="center">
+
+<tr>
+             	<th colspan="2" class="main-heading">REGISTRATION FORM</th>
+             	
+</tr>
+<tr>
+	<select name="role">
+
+		
+								<option value="0">Select</option>
+		                        {% if data %}
+								  {% for i in data %}
+		                              <option value="{{i.id}}">{{i.role}}</option>
+			                      
+			                      {% endfor %}
+		                        {% else %}
+		                              <option>No Data Found</option>
+
+		                        {% endif %}
+								
+	</select>
+						</tr>
+<tr>
+<td>User Name</td>
+<td><input type="text" name="name" ></td>
+</tr>
+<tr>
+<td>Email</td>
+<td><input type="text" name="email"></td>
+</tr>
+	
+<tr>
+<td>Gender</td>
+	<td><input type="radio" name="gender" value="male">Male
+<input type="radio" name="gender" value="female">Female
+</td>
+</tr>
+
+            <tr>
+<!--<td colspan="2"><input type="checkbox" name="check">I accept term and conditions<t>-->
+    <td> <center><input type="submit" style="background-color:red; color:white"  value="Register"></td>
+</tr>
+
+
+</table>
+
+</form>
+
+</body>
+</html>
